@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+
 * {
 	margin: 0;
 	padding: 0;
@@ -41,13 +42,13 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	font-family: "Roboto Condensed", "sans-serif";
 	width: 50vw;
 	position: absolute;
 	right: 50%;
 	top: 50%;
 	transform: translate(50%, -50%);
 	text-align: center;
-	font-family: "Roboto Condensed", "sans-serif";
 }
 
 .banner-text h1 {
@@ -61,8 +62,11 @@ body {
 }
 
 .button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	font-family: "Roboto", "sans-serif";
-	font-size: 1.5vw;
+	font-size: 1.3vw;
 	font-weight: bold;
 	background-color: black;
 	color: white;
@@ -70,9 +74,6 @@ body {
 	transition: 0.2s all ease-in-out;
 	height: 70px;
 	width: 220px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	text-decoration: none;
 }
 
@@ -152,7 +153,13 @@ body {
 	}
 }
 
+/* TABLET  */
+
 @media (max-width: 1200px) {
+	.banner-right {
+		background-position-x: -830px;
+	}
+
 	.banner-text h1 {
 		font-size: 6vw;
 	}
@@ -161,26 +168,14 @@ body {
 		font-size: 2.5vw;
 	}
 
-	.banner-right {
-		display: none;
-	}
-
-	.banner-left {
-		width: 100vw;
-	}
-
 	.button {
-		font-size: 2.5vw;
+		font-size: 2vw;
 	}
 }
 
 /* MOBILE */
 
 @media (max-width: 769px) {
-	a {
-		margin-bottom: 5px;
-	}
-
 	.banner {
 		height: 650px;
 	}
@@ -190,6 +185,7 @@ body {
 	}
 
 	.banner-left {
+		width: 100vw;
 		background-size: auto 800px;
 		background-position: top center;
 		background-position-y: -30px;
@@ -197,9 +193,9 @@ body {
 	}
 
 	.banner-text {
+		color: white;
 		top: 85%;
 		width: 95%;
-		color: white;
 		padding-bottom: 80px;
 	}
 
@@ -208,8 +204,8 @@ body {
 	}
 
 	.banner-text p {
-		font-size: 4.2vw;
-		margin-bottom: 20px;
+		font-size: 4vw;
+		padding-bottom: 30px;
 	}
 
 	.button {
@@ -228,10 +224,6 @@ body {
 
 	.collections-2 {
 		margin: 55px 0px 55px 0px;
-	}
-
-	.collections-3 {
-		margin-bottom: 0;
 	}
 
 	.collections-1-img,
