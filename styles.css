@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
 * {
 	margin: 0;
 	padding: 0;
@@ -14,7 +13,7 @@ body {
 .banner {
 	display: flex;
 	position: relative;
-	height: 600px;
+	height: 750px;
 }
 
 .banner-left,
@@ -24,14 +23,17 @@ body {
 }
 
 .banner-right {
-	background-image: url(./assets/Guide13.png);
-	background-repeat: no-repeat;
-	background-position: bottom;
-	background-size: cover;
+	background-image: url(./assets/Guide.png);
+	background-position: -651px -90px;
+	background-size: 1700px auto;
 }
 
 .banner-left {
-	background-image: url(./assets/CanyonTRg.png);
+	background-image: url(./assets/Canyon.png);
+	transform: scaleX(-1);
+	background-size: 1850px auto;
+	background-position: center top;
+	background-position-y: -70px;
 }
 
 .banner-text {
@@ -49,25 +51,25 @@ body {
 }
 
 .banner-text h1 {
-	font-weight: bolder;
-	font-size: 3.7vw;
+	font-size: 4vw;
+	padding-bottom: 10px;
 }
 
 .banner-text p {
-	font-size: 1.6vw;
-	margin-bottom: 60px;
+	font-size: 2vw;
+	padding-bottom: 80px;
 }
 
 .button {
 	font-family: "Roboto", "sans-serif";
-	font-size: 1vw;
+	font-size: 1.5vw;
 	font-weight: bold;
 	background-color: black;
 	color: white;
 	cursor: pointer;
 	transition: 0.2s all ease-in-out;
-	height: 50px;
-	width: 180px;
+	height: 70px;
+	width: 220px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -82,8 +84,7 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	padding-top: 58px;
-	padding-bottom: 10px;
+	margin: 70px 55px 10px 55px;
 }
 
 .collections h2 {
@@ -91,42 +92,39 @@ body {
 	font-weight: bold;
 	font-size: 30px;
 	padding: 15px 0;
+	text-align: center;
 }
 
-.collection-1,
-.collection-2,
-.collection-3 {
+.collections-1,
+.collections-2,
+.collections-3 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	min-width: 200px;
+	margin-bottom: 10px;
 }
 
-.collection-11 {
-	height: 600px;
-	width: 400px;
+.collections-1-img,
+.collections-2-img,
+.collections-3-img {
+	height: 610px;
+	width: 450px;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center;
+	margin: 0 10px;
+}
+
+.collections-1-img {
 	background-image: url(./assets/Triumph18.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	margin: 0 10px;
 }
 
-.collection-22 {
-	height: 600px;
-	width: 400px;
-	background-image: url(./assets/Peregrine10-23.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	margin: 0 10px;
+.collections-2-img {
+	background-image: url(./assets/Peregrine.png);
 }
 
-.collection-33 {
-	height: 600px;
-	width: 400px;
+.collections-3-img {
 	background-image: url(./assets/8.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	margin: 0 10px;
 }
 
 .subnav a {
@@ -137,29 +135,38 @@ body {
 	display: flex;
 }
 
-/* MOBILE */
+/* MAX WIDTH DISPLAY */
 
-@media (max-width: 1100px) {
-	.banner-right {
-		display: none;
-	}
-	.banner-left {
-		width: 100vw;
-		background-position: -100px;
-	}
-}
-
-@media (max-width: 769px) {
-	.banner-left {
-		background-position: -240px;
-	}
-
+@media (min-width: 1920px) {
 	.banner-text h1 {
-		font-size: 7vw;
+		font-size: 70px;
+		font-weight: 700;
 	}
 
 	.banner-text p {
-		font-size: 4vw;
+		font-size: 31px;
+	}
+
+	.button {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.banner-text h1 {
+		font-size: 6vw;
+	}
+
+	.banner-text p {
+		font-size: 2.5vw;
+	}
+
+	.banner-right {
+		display: none;
+	}
+
+	.banner-left {
+		width: 100vw;
 	}
 
 	.button {
@@ -167,9 +174,15 @@ body {
 	}
 }
 
-@media (max-width: 575.98px) {
+/* MOBILE */
+
+@media (max-width: 769px) {
 	a {
 		margin-bottom: 5px;
+	}
+
+	.banner {
+		height: 650px;
 	}
 
 	.banner-right {
@@ -177,60 +190,66 @@ body {
 	}
 
 	.banner-left {
-		background-image: url(./assets/CanyonTRg-m.png);
-		background-size: 130%;
-		background-position: -70px;
-		background-position-y: -11px;
+		background-size: auto 800px;
+		background-position: top center;
+		background-position-y: -30px;
 		background-repeat: no-repeat;
 	}
 
 	.banner-text {
-		top: 80%;
+		top: 85%;
 		width: 95%;
 		color: white;
+		padding-bottom: 80px;
 	}
 
 	.banner-text h1 {
-		font-size: 11vw;
+		font-size: 8.5vw;
 	}
 
 	.banner-text p {
-		font-size: 4.6vw;
+		font-size: 4.2vw;
 		margin-bottom: 20px;
 	}
 
 	.button {
-		font-size: 4.5vw;
+		font-size: 4.3vw;
+		width: 52vw;
+		height: 70px;
 	}
 	.collections {
 		flex-direction: column;
+		margin: 60px 0px 10px 0px;
 	}
 
-	.collection-1,
-	.collection-2,
-	.collection-3 {
-		margin-bottom: 30px;
+	.collections h2 {
+		font-size: 6.3vw;
 	}
 
-	.collection-11 {
-		height: 65vw;
-		width: 80vw;
-		background-size: cover;
+	.collections-2 {
+		margin: 55px 0px 55px 0px;
+	}
+
+	.collections-3 {
+		margin-bottom: 0;
+	}
+
+	.collections-1-img,
+	.collections-2-img,
+	.collections-3-img {
+		height: 70vw;
+		width: 85vw;
+	}
+
+	.collections-1-img {
 		background-image: url(./assets/Triumph18-m.png);
 	}
 
-	.collection-22 {
-		height: 65vw;
-		width: 80vw;
-		background-size: 100% 101%;
+	.collections-2-img {
 		background-image: url(./assets/Peregrine-m.png);
 	}
 
-	.collection-33 {
-		height: 65vw;
-		width: 80vw;
-		/* background-position-y: 143px; */
-		background-size: 100% 100%;
+	.collections-3-img {
 		background-image: url(./assets/8-m.png);
 	}
 
@@ -241,9 +260,5 @@ body {
 
 	.subnav a {
 		margin-bottom: 10px;
-	}
-
-	.collection-3 {
-		margin-bottom: 0;
 	}
 }
